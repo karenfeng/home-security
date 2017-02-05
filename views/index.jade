@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Your home
+  p #{frontdoor} #{backdoor}
+  div(id='floorplan')
+  script.
+    var frontdoor_col = #{frontdoor} ? 'green' : 'red'
+    d3.select("#floorplan")
+      .append("svg")
+        .append('rect')
+        .attr('width', 50)
+        .attr('height', 300)
+        .attr('x', 0)
+        .attr('y', 0)
+        .attr('fill', frontdoor_col)

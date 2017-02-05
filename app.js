@@ -2,6 +2,7 @@
 
 var express = require('express');
 var path = require('path');
+var d3 = require('d3');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
